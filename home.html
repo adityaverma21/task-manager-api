@@ -1,0 +1,374 @@
+<html>
+<head>
+	 <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <title>Streamer Home</title>
+</head>
+<body>
+	<style>
+body {
+  background-image: url(backg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.lds-roller-wrapper{
+	position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color:black;
+z-index: 999999;
+}
+ .lds-roller {
+  display: inline-block;
+  position: relative;
+width: 40px;
+  height: 40px;
+  position: absolute;
+top: 48%;
+left: 48%;
+ 
+  }
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+	</style>
+	<style>
+.dropbtn {
+  
+  color:black;  
+  font-size: 16px;
+  border:none;
+  background: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.dropdown-content a {
+  color: black;
+ 
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {color: #FFA500;}
+</style>
+		<style>
+			#home{color:black;				
+				border:none; 
+				background: none;
+					}
+			#home:hover{
+					
+					color:#FFA500; 
+					text-decoration: none;
+			}
+			#contactus{
+				color:black;
+			}
+			#contactus:hover{
+				color:#FFA500;			
+				text-decoration: none;
+			}
+			
+			#homewrite{
+				margin-left: 10px;
+
+
+			}
+			#Gradient{
+				margin-top: 60px;
+				background-image:linear-gradient(to bottom right,#cc2b5e, #753a88) ;
+			}		
+		</style>
+			<style>
+.dropbtn {
+  
+  color:black;
+  font-size: 16px;
+  border:none;
+  background: none;
+}
+
+.content {
+	position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 80px;;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+.button4 {border-radius: 12px;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+	background-color: white;
+  display: none;
+  position: absolute;
+  
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {color: #FFA500;}
+#submitbtn{
+	font-size:20px; 
+	background-color:#cc2b5e;
+	width: 150px;
+	border-radius:50px; 
+height: 50px;
+}
+#submitbtn:hover{
+	background-color:#753a88;
+}
+#textf1{
+	background-color: #F0F0F0;
+	border-radius: 6px;
+	padding-left: 10px;
+	
+	padding-top: 10px;
+	padding-bottom: 10px;  
+	
+	margin-bottom:30px;
+	border:none;
+
+}
+#textf2{
+	background-color: #F0F0F0;
+	border-radius: 6px;
+	padding-top: 10px;
+	padding-bottom: 10px;  
+	margin-bottom:30px;
+	border:none;
+
+}
+#msg1{
+	background-color: #F0F0F0;
+	border-radius: 6px;
+	border:none;
+	padding-bottom: 100px;
+	margin-bottom: 30px;
+}
+#number1{
+	background-color: #F0F0F0;
+	border-radius: 6px;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;  
+	margin-bottom:30px;
+	border:none;
+ }
+#email{	background-color: #F0F0F0;
+	border-radius: 6px;
+		padding-top: 10px;
+	padding-bottom: 10px;  
+	margin-bottom:30px;
+	border:none;
+  }
+  #Line{
+  	border-left:6px ;
+  	border-color: black;
+  }
+  #homed{color:black;
+				
+				padding:16px;border:none; background: none
+
+
+		}
+		#homed:hover{color:#FFA500; 
+					text-decoration: none;
+
+		}
+		#edu{color:black;
+				padding:16px;border:none; background: none
+
+		}
+		#edu:hover{color:#FFA500; 
+					text-decoration: none;
+
+		}
+		#aboutus{color:black;
+				padding:16px;border:none; background: none
+
+		}
+		#aboutus:hover{color:#FFA500; 
+					text-decoration: none;
+
+		}
+		#kmc{color:black;
+				
+				padding:16px;border:none; background: none
+
+		}
+		#kmc:hover{color:#FFA500; 
+					text-decoration: none;
+
+		}
+		#incu{color:black;
+				
+				padding:16px;border:none; background: none}
+		#incu:hover{color:#FFA500; 
+					text-decoration: none;}
+		#mutbi{color:black;
+				
+				padding:16px;
+				border:none;
+				 background: none}
+			#mutbi:hover{color:#FFA500; 
+					text-decoration: none;}
+			#cond{color:black;
+				
+				padding:16px;border:none; background: none}
+			#cond:hover{color:#FFA500; 
+					text-decoration: none;}
+			#MUGOK{color:black;
+				
+				padding:16px;border:none; background: none}
+			#MUGOK:hover{color:#FFA500; 
+					text-decoration: none;}
+		}
+</style>
+	
+	<div class="content">
+		<b style="font-size:40px;color:#000000; text-align:center">STREAMER<sup>&copy</sup></b>	
+<br>
+<b style="font-size:20px; color:#000000; text-align:center">Hospital Solutions</b>	<br>
+	<button class="button button4" id="Gradient">Departments</button>		
+	<button class="button button4" id="Gradient" onClick="parent.location='infodesk.html'">Help Desk</button>		
+</div>
+</div>
+   </div>   
+<script>
+$(document).ready(function() {
+preloaderFadeOutTime = 1500;
+function hidePreloader() {
+var preloader = $('.lds-roller-wrapper');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+</script>
+</body>
